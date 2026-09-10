@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rocky Linux VPSで公開する練習用ポートフォリオサイト">
+    <title>Shohei | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav container">
+            <a class="logo" href="/">SHOHEI<span>.</span></a>
+            <button class="menu-button" aria-label="メニューを開く" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <p class="eyebrow">ROCKY LINUX / WEB / LEARNING</p>
+                    <h1>Linuxから始める、<br><span>自分のWebサイト。</span></h1>
+                    <p class="hero-text">
+                        Rocky Linux VPSを使って、Webサーバーの構築・運用と
+                        Web制作を学んでいます。
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="#projects">Projectsを見る</a>
+                        <a class="button secondary" href="#about">About me</a>
+                    </div>
+                </div>
+
+                <div class="terminal-card">
+                    <div class="terminal-bar">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> whoami</p>
+                        <p>rocky</p>
+                        <p><span class="prompt">$</span> systemctl status nginx</p>
+                        <p class="success">● nginx.service - active (running)</p>
+                        <p><span class="prompt">$</span> echo "Hello, Web!"</p>
+                        <p>Hello, Web!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container narrow">
+                <p class="section-label">01 / ABOUT</p>
+                <h2>サーバーを触りながら、<br>Webの仕組みを理解する。</h2>
+                <p class="lead">
+                    このサイトは、HTML・CSS・JavaScriptを使った練習用ポートフォリオです。
+                    VPS上のNginxからHTTPで公開することを想定しています。
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <p class="section-label">02 / SKILLS</p>
+                <h2>現在学習していること</h2>
+                <div class="cards">
+                    <article class="card">
+                        <span class="card-number">01</span>
+                        <h3>Linux</h3>
+                        <p>Rocky Linux、SSH、ファイル操作、権限、プロセス、ログなど。</p>
+                    </article>
+                    <article class="card">
+                        <span class="card-number">02</span>
+                        <h3>Nginx</h3>
+                        <p>Webサーバー、公開ディレクトリ、HTTP、ポート、設定を学習中。</p>
+                    </article>
+                    <article class="card">
+                        <span class="card-number">03</span>
+                        <h3>Web制作</h3>
+                        <p>HTML、CSS、JavaScriptを使って実際にページを作成しています。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <p class="section-label">03 / PROJECTS</p>
+                <h2>Projects</h2>
+                <div class="project-list">
+                    <article class="project">
+                        <div class="project-index">01</div>
+                        <div>
+                            <h3>Rocky Linux Web Server</h3>
+                            <p>Rocky Linux VPSにNginxを構築し、HTMLサイトをHTTPで公開。</p>
+                            <span class="tag">Linux</span>
+                            <span class="tag">Nginx</span>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="project-index">02</div>
+                        <div>
+                            <h3>Portfolio Site</h3>
+                            <p>HTML・CSS・JavaScriptによるポートフォリオサイト。</p>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container narrow">
+                <p class="section-label">04 / CONTACT</p>
+                <h2>Let's build something.</h2>
+                <p class="lead">この練習サイトを自分のプロフィールや実績に合わせて編集してみてください。</p>
+                <button class="button primary" id="messageButton">メッセージを表示</button>
+                <p id="message" class="message" aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year"></span> Shohei. Built on Rocky Linux.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
